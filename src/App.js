@@ -1,14 +1,16 @@
 import './App.css';
-import Counter from './Counter'
 import React from 'react';
-import Hello from './hello/Hello'
+import Bmi from './auth/Bmi';
+import Calc from './auth/Calc';
+import Grade from './auth/Grade';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Hello />
-        <Counter />
+        <Bmi />
+        <Calc />
+        <Grade />
       </header>
     </div>
   );
