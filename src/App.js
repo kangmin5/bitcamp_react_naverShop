@@ -1,18 +1,24 @@
-import './App.css';
-import React from 'react';
-import Bmi from './auth/Bmi';
-import Calc from './auth/Calc';
-import Grade from './auth/Grade';
 
-function App() {
+import React from 'react';
+import Home from './hello/Home'
+import Login from './hello/Login'
+import Bmi from "./hello/Bmi"
+import Calc from './hello/Calc'
+import Grade from './hello/Grade'
+import { BrowserRouter as Router , Routes,Route,Link } from 'react-router-dom';
+
+const App=()=> {
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <Bmi />
-        <Calc />
-        <Grade />
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element ={<Home/>}/>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/bmi' element={<Bmi/>}/>
+      <Route path='/calc' element={<Calc/>}/>
+      <Route path='/grade' element={<Grade/>}/>
+    </Routes>
   );
 }
 
