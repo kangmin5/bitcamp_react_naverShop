@@ -1,22 +1,23 @@
 import React from 'react'
+import Layout from '../containers/Layout'
 
-const Calc = () => {
+export default function Calc(){
   return (
-    <div>
+    <Layout>
       <h1>계산기</h1>
       <div>
         <form action="">
-          <label for="">숫자1</label>
+          <label htmlFor="">숫자1</label>
           <input  />
-          <label for="">연산</label>
+          <label htmlFor="">연산</label>
           <input  />
-          <label for="">숫자2</label>
+          <label htmlFor="">숫자2</label>
           <input  /><br/>
           <button>확인</button>
         </form>
       </div>
-    </div>
+    </Layout>
   )
 }
 
-export default Calc
+

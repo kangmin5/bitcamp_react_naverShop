@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../containers/Layout'
 
-const Grade = () => {
+export default function Grade(){
   return (
-    <div>
+    <Layout>
+
+
       <h1>성적(국,영,수)</h1>
 
       <div>
@@ -20,8 +23,9 @@ const Grade = () => {
 
         </form>
       </div>
-    </div>
+
+    </Layout>
   )
 }
 
-export default Grade
+

@@ -1,25 +1,17 @@
+import React from 'react'
+import {useRoutes} from 'react-router-dom';
+import Home from './pages/Home'
+import Bmi from './components/Bmi'
+import Calc from './components/Calc'
+import Grade from './components/Grade'
+import Login from './components/Login'
 
-import React from 'react';
-import Home from './hello/Home'
-import Login from './hello/Login'
-import Bmi from "./hello/Bmi"
-import Calc from './hello/Calc'
-import Grade from './hello/Grade'
-import { BrowserRouter as Router , Routes,Route,Link } from 'react-router-dom';
-
-const App=()=> {
-
-
-
-  return (
-    <Routes>
-      <Route path="/" element ={<Home/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/bmi' element={<Bmi/>}/>
-      <Route path='/calc' element={<Calc/>}/>
-      <Route path='/grade' element={<Grade/>}/>
-    </Routes>
-  );
+export default function App(){
+  return useRoutes([
+    {path: "/", element: <Home />},
+    {path: "/bmi", element: <Bmi />},
+    {path: "/calc", element: <Calc />},
+    {path: "/grade", element: <Grade />},
+    {path: "/login", element: <Login />},
+  ])
 }
-
-export default App;
