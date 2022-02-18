@@ -1,9 +1,8 @@
 import Layout from "../containers/Layout"
-
 export default function Login(){
 
   return (
-    <Layout>
+    <Layout className="login">
       <h1>Login</h1>
       <form >
         <div> 
@@ -11,12 +10,12 @@ export default function Login(){
         </div>
         <div>
           <label htmlFor="name"><b>Username  </b></label>
-            <input placeholder='이름' type='text'  required/><br/>
+            <input placeholder='이름' type='text'  /><br/>
           <label htmlFor="pw"><b>Password  </b></label>
-            <input placeholder='암호' type ='password'  required/><br/>
+            <input placeholder='암호' type ='password'  /><br/>
             <button type="submit" >login</button>
           <label>
-            <input type ="checkbox" checked="checked" name="remember" />Remember Me
+            <input type ="checkbox"  name="" />Remember Me
           </label>
         </div>
       </form>
