@@ -1,0 +1,24 @@
+.loginall{
+    margin-left: 30px;
+}
+
+.user{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.user .user-name{
+    flex-grow: 1;
+}
+.user .user-pass{
+    color: blue;
+}
+.login-form input{
+    margin: 5px;
+    padding: 5px;
+}

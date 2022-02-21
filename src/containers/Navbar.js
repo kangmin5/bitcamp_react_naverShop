@@ -12,7 +12,6 @@ export default function Navbar(){
         <Li><Link to="/grade">Grade</Link></Li>
         <Li><Link to="/login">Login</Link></Li>
         <Li><Link to="/counter">Counter</Link></Li>
-        <Li><Link to="/menu1">Menu1</Link></Li>
       </Ul>
     </nav>
 </div>
@@ -24,7 +23,6 @@ text-align: center;
 
 `
 const Li = styled.li`
-float: 0;
 list-style-type: none;
 display: inline-block;
 margin-left: 1em;

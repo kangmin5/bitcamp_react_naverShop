@@ -1,10 +1,12 @@
-import React from 'react'
-import Layout from '../containers/Layout'
+import React, { useState } from 'react'
 
 export default function Menu1() {
+    
+    
   return (
-    <Layout>
+    <div>
       <h1>menu1</h1>
-    </Layout>
+
+    </div>
   )
 }

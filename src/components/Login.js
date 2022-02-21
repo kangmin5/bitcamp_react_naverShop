@@ -1,31 +1,43 @@
-import { useState } from "react"
+import { useState } from 'react'
+import '../App.css'
 import Layout from "../containers/Layout"
+import User from './User'
 
 export default function Login(){
-  const [name,setName] = useState("")
-  const [pass,setPass] = useState("")
-  const result=()=>{
-    let name = document.getElementById('name').value
-    setName(name)
-    let pass = document.getElementById('pass').value
-    setPass(pass)
+
+  const [username,setUsername]=useState('')
+  const [password,setPassword]= useState('')
+  const [users,setUsers]=useState([{username:'mk',password:'1111'},
+                                   {username:'ht',password:'2222'}]
+  )
+
+  const renderUsers = users.map((user)=>{
+    return (
+      <User user={user} key={user.username} />
+    )
+  })
+
+  const addUser=(e)=>{
+    e.preventDefault()
+    setUsers([
+      {username:username,password:password},...users
+    ])
+    setUsername('')
+    setPassword('')
   }
 
+
   return (<Layout>
+    <div className='loginall'>
       <h1>Login</h1>
-        
-        <div>
-          <label><b>Username  </b></label>
-            <input id="name"/><br/>
-          <label><b>Password  </b></label>
-            <input type="password" id='pass' /><br/>
-            <button onClick={result}>login</button>
-          <div>
-            <h3>이름은 {name}이고 암호는{pass}입니다.</h3>
-          </div>
-        </div>
 
-
+      <form className='login-form' onSubmit={addUser}>
+        <input placeholder="Username" type='text' value={username} onChange={(e)=>setUsername(e.target.value)} /><br/>
+        <input placeholder='Password' type='password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
+        <button type="submit">Login</button>
+      </form>
+      {renderUsers}
+    </div>
     </Layout>
   )
 }
