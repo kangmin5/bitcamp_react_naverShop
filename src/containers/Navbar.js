@@ -12,6 +12,7 @@ export default function Navbar(){
         <Li><Link to="/grade">Grade</Link></Li>
         <Li><Link to="/login">Login</Link></Li>
         <Li><Link to="/counter">Counter</Link></Li>
+        <Li><Link to="/menu1">Menu1</Link></Li>
       </Ul>
     </nav>
 </div>

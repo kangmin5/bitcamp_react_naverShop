@@ -6,6 +6,7 @@ import Calc from './components/Calc'
 import Grade from './components/Grade'
 import Login from './components/Login'
 import Counter from './components/Counter';
+import Menu1 from './components/Menu1';
 
 export default function App(){
   return useRoutes([
@@ -15,5 +16,6 @@ export default function App(){
     {path: "/grade", element: <Grade />},
     {path: "/login", element: <Login />},
     {path: "/counter", element: <Counter />},
+    {path: "/menu1", element: <Menu1 />},
   ])
 }
