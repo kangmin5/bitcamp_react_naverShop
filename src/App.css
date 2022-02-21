@@ -1,3 +1,33 @@
+.layoutall{
+}
+.gradeall{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: space-arount; 
+     margin-left: 30px;
+}
+.gradeall .gradeleft{
+    flex-grow: 1;
+    text-align: center;
+}
+.gradeleft input{
+    padding: 5px;
+    margin: 2px;
+}
+.gradeall .graderight{
+    flex-grow: 1;
+    text-align: center;
+}
+.grade{
+    border:1px solid blue;
+    border-radius: 8px;
+    margin:5px;
+    padding: 5px;
+    
+}
+
+
 .loginall{
     margin-left: 30px;
 }
