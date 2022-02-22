@@ -1,5 +1,21 @@
 .layoutall{
 }
+.calcall{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.calcall input{
+    padding: 3px;
+    margin: 5px;
+}
+.calcall button{
+    margin: 4px 50px;
+    
+    padding: 2px;
+
+}
 .gradeall{
      display: flex;
      flex-direction: row;

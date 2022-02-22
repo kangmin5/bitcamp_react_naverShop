@@ -7,9 +7,7 @@ export default function Login(){
 
   const [username,setUsername]=useState('')
   const [password,setPassword]= useState('')
-  const [users,setUsers]=useState([{username:'mk',password:'1111'},
-                                   {username:'ht',password:'2222'}]
-  )
+  const [users,setUsers]=useState([])
 
   const renderUsers = users.map((user)=>{
     return (
