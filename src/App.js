@@ -5,7 +5,8 @@ import Bmi from './components/Bmi'
 import Calc from './components/Calc'
 import Grade from './components/Grade'
 import Login from './components/Login'
-import Counter from './components/Counter';
+import Lotto from './components/Lotto';
+
 import Menu1 from './components/Menu1';
 
 export default function App(){
@@ -15,7 +16,7 @@ export default function App(){
     {path: "/calc", element: <Calc />},
     {path: "/grade", element: <Grade />},
     {path: "/login", element: <Login />},
-    {path: "/counter", element: <Counter />},
+    {path: "/lotto", element: <Lotto />},
     {path: "/menu1", element: <Menu1 />},
   ])
 }
