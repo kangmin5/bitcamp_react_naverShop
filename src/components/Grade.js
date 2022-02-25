@@ -3,50 +3,30 @@ import Layout from '../containers/Layout'
 import Exam from './Exam'
 
 export default function Grade(){
-const [grades,setGrades] = useState([])
-const [name,setName] = useState("")
-const [kor,setKor] = useState(0)
-const [eng,setEng] = useState(0)
-const [math,setMath] = useState(0)
+  const [inputs,setInputs]=useState({})
+  const {name,kor,eng,math} = inputs
 
-const renderGrades = grades.map((grade)=>{
-  return(
-    <Exam grade={grade} key={grade.name}/>
-    )
-})
+  const handleChange=(e)=>{
+    const {name,value}=e.target
+    setInputs({...inputs,[name]:value})
+  }
+
    
-const addExam=(e)=>{
-  e.preventDefault()
-  setGrades([
-    {name:name,kor:kor,eng:eng,math:math },...grades
-  ])
-  setName('')
-  setKor('')
-  setEng('')
-  setMath('')
-}
-    return (
-      <Layout>
-      <div className='gradeall '>
-      <div className='gradeleft '>
+  const handleClick=(e)=>{
+    e.preventDefault()
+    const renderRequest = {name,kor,eng,math}
+    alert(`Grade : ${JSON.stringify(renderRequest)}`)
+  }
+    return (<Layout>
       <h1>성적(국,영,수)</h1>
-        <form onSubmit={addExam} >
-          <input placeholder='이름' type='text' value={name} onChange={(e)=>setName(e.target.value)}/><br/>
-          <input placeholder='국어' type='text' value={kor} onChange={(e)=>setKor(e.target.value)} /><br/>
-          <input placeholder='영어' type='text' value={eng} onChange={(e)=>setEng(e.target.value)}/><br/>
-          <input placeholder='수학' type='text' value={math} onChange={(e)=>setMath(e.target.value)} /><br/>
-
-          <button type="submit">확인</button>
+        <form>
+          <input placeholder='이름' name='name' onChange={handleChange}/><br/>
+          <input placeholder='국어' name='kor'  onChange={handleChange} /><br/>
+          <input placeholder='영어' name='eng' onChange={handleChange}/><br/>
+          <input placeholder='수학' name='math' onChange={handleChange} /><br/>
+          <button onClick={handleClick}>확인</button>
         </form>
-      </div>
-      <div className='graderight '>
-        <h5>{renderGrades}</h5>
-      </div>
-
-    </div>
-
-    </Layout>
-  )
+    </Layout>)
 }
 
 

@@ -1,40 +1,32 @@
 import { useState } from 'react'
 import '../App.css'
 import Layout from "../containers/Layout"
-import User from './User'
+
 
 export default function Login(){
 
-  const [username,setUsername]=useState('')
-  const [password,setPassword]= useState('')
-  const [users,setUsers]=useState([])
+  const [inputs,setInputs] = useState({})
+  const {username,password} = inputs
 
-  const renderUsers = users.map((user)=>{
-    return (
-      <User user={user} key={user.username} />
-    )
-  })
-
-  const addUser=(e)=>{
+  const handleChange = (e)=>{
+    const {name,value} = e.target
+    setInputs({...inputs,[name]:value})
+  }
+  const handleClick =(e)=>{
     e.preventDefault()
-    setUsers([
-      {username:username,password:password},...users
-    ])
-    setUsername('')
-    setPassword('')
+    const loginRequest ={username,password}
+    alert(`Login : ${JSON.stringify(loginRequest)}`)
   }
 
 
   return (<Layout>
-    <div className='loginall'>
+    <div>
       <h1>Login</h1>
-
-      <form className='login-form' onSubmit={addUser}>
-        <input placeholder="Username" type='text' value={username} onChange={(e)=>setUsername(e.target.value)} /><br/>
-        <input placeholder='Password' type='password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
-        <button type="submit">Login</button>
+      <form>
+        <input placeholder="Username" name='username' onChange={handleChange} /><br/>
+        <input placeholder='Password' type='password' name="password" onChange={handleChange}/><br/>
+        <button onClick={handleClick}>Login</button>
       </form>
-      {renderUsers}
     </div>
     </Layout>
   )
