@@ -4,4 +4,4 @@ export const memberCalc = calcRequest => axios.post(`${SERVER}/member/calc`,calc
 export const memberBmi = bmiRequest => axios.post(`${SERVER}/member/bmi`,bmiRequest)
 export const memberGrade = gradeRequest => axios.post(`${SERVER}/member/grade`,gradeRequest)
 export const memberLogin = loginRequest => axios.post(`${SERVER}/member/login`,loginRequest)
-            
+export const memberLotto = lottoRequest => axios.post(`${SERVER}/member/lotto`,lottoRequest)
