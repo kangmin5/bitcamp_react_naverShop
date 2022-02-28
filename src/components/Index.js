@@ -1,0 +1,7 @@
+export {default as Bmi} from './Bmi'
+export {default as Grade} from './Grade'
+export {default as Calc} from './Calc'
+export {default as Login} from './Login'
+export {default as Lotto} from './Lotto'
+export {default as Home} from './../pages/Home'
+export {default as Menu1} from './Menu1'

@@ -1,12 +1,7 @@
 import React from 'react'
 import {useRoutes} from 'react-router-dom';
 import Home from './pages/Home'
-import Bmi from './components/Bmi'
-import Calc from './components/Calc'
-import Grade from './components/Grade'
-import Login from './components/Login'
-import Lotto from './components/Lotto';
-
+import {Bmi,Calc,Grade,Login,Lotto,Home,Menu1} from './components/Index'
 import Menu1 from './components/Menu1';
 
 export default function App(){
